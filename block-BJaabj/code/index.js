@@ -1,7 +1,10 @@
 /*
 1. Create a function named `sayHello` that alerts a message `Hello World!`.
 */
-
+function sayHello(){
+  alert("Hello World!");
+}
+sayHello();
 /*
 2. Create a function named `fullName` with the following steps:
 
@@ -10,7 +13,17 @@
   - Concat the value of fistName and lastName and store it in another variable named `fullName`.
   - Alert `fullName`
 */
+function fullName(){
+let firstName = prompt('Enter your first name');
 
+let secondName = prompt('Enter your second name');
+
+let fullName = firstName+" "+secondName;
+
+alert(fullName);
+}
+
+fullName();  
 /*
 3. Create a function named `addTwoNumbers` with the following steps:
 
@@ -19,7 +32,17 @@
   - Add the value of firstNum and secondNum and store it in another variable named `sum`.
   - Alert `sum`
 */
+function sum(){
+let firstNum = +prompt('Enter the first number');
 
+let secondNum = +prompt('Enter the second');
+
+let sum = firstNum + secondNum;
+
+alert(sum);
+}
+
+sum();
 /*
 4. Create a function named `getTable` with the following steps:
 
@@ -39,13 +62,37 @@
   9 * 10 = 90
 */
 
+function getTable(){
+const num = +prompt('Enter a number');
+
+for(let i = 1; i <= 10; i++) {
+
+    // multiply i with number
+    const result = i * num;
+
+    // display the result
+    console.log(`${num} * ${i} = ${result}`);
+}
+}
+
+getTable();
 /*
 5. Create a function named `isLeapYear` with the following steps:
 
   - Prompts a message saying `Enter a year` and store the value into variable named`year`
   - Alert `[year] is a leap year` otherwise `[year] is not a leap year`
 */
+function isLeapYear(){
 
+let year = +prompt('Enter a year');
+
+if((0 == year % 4) && (0 != year % 100) || (0 == year % 400)){
+  alert(`${year} is a leap year`);
+} else {
+ alert(`${year} is not a leap year`);
+}
+}
+isLeapYear();  
 /*
 6. Create a function named `getFactorial` with the following steps:
 
@@ -53,3 +100,26 @@
   - Alert `The factorial of [number] is [factorial]`
 
 */
+
+function getFactorial(){
+
+let number = +prompt('Enter a number');
+
+if (number < 0) {
+  alert('Error! Factorial for negative number does not exist.');
+}
+
+else if (number === 0) {
+ alert(`The factorial of ${number} is 1.`);
+}
+
+else {
+  let fact = 1;
+  for (i = 1; i <= number; i++) {
+      fact *= i;
+  }
+  alert(`The factorial of ${number} is ${fact}.`);
+}
+}
+
+getFactorial();
